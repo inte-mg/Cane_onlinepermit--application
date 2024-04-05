@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/RL_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/ok_button">
+
+        <LinearLayout
+            android:id="@+id/LL_titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/IV_Loginback"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/candidate" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/splitLine1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/LL_titleBar"
+            android:layout_marginTop="15dp"
+            android:background="@color/white" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/splitLine1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_bg"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/lightgrey"
+            android:textColorHint="@color/darkgrey" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/fullName"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/btn_bg"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/lightgrey"
+            android:textColorHint="@color/darkgrey" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_Rpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:textColorHint="@color/darkgrey"
+            app:passwordToggleContentDescription="Toggle Password"
+            app:passwordToggleDrawable="@drawable/ic_eye"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/ic_baseline_security_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/lightgrey"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_Cpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TIL_Rpassword"
+            android:textColorHint="@color/darkgrey"
+            app:passwordToggleContentDescription="Toggle Password"
+            app:passwordToggleDrawable="@drawable/ic_eye"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/ic_baseline_security_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/lightgrey" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/LL_Role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TIL_Cpassword"
+            android:layout_marginTop="10dp"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:fontFamily="serif"
+                android:text="Role"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:layout_width="150dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="50dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:id="@+id/spinner"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/buttonBookAppointment"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/LL_Role"
+            android:layout_height="50dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="32dp"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:background="@drawable/btn_bg"
+            android:text="REGISTER" />
+
+        <TextView
+            android:id="@+id/textViewExistingUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonBookAppointment"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Already have an account? Login"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/splitLine2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/textViewExistingUser"
+            android:layout_marginTop="15dp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/LL_Designed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/splitLine2"
+            android:background="@color/bluehead"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/TV_Designed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024 @ Designed by "
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/TV_Zeph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Wanyonyi"
+                android:textColor="@color/maroon"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

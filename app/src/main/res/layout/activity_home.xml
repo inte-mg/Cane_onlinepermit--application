@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/LL_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/IV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_backarrow" />
+
+        <TextView
+            android:id="@+id/titleHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:text="Profile"
+            android:layout_toRightOf="@+id/IV_back"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LL_titleBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/TV_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="Update your profile here "
+                android:textColor="@color/bluehead"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                />
+
+            <RelativeLayout
+                android:id="@+id/RL_Form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@+id/TV_1"
+                android:padding="3dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/btn_bg1"
+                android:elevation="3dp">
+
+                <TextView
+                    android:id="@+id/TextV_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Agents Details"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/splitLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_below="@+id/TextV_2"
+                    android:background="@android:color/holo_orange_dark" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/splitLine1"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Agent's Name"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etName"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/baseline_local_phone"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Mobile Number"
+                    android:textSize="18sp"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etMobile"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Email Address"
+                    android:textSize="18sp"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etIDNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etEmailAddress"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/baseline_pin_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter ID Number"
+                    android:textSize="18sp"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etCounty"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etIDNo"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/ic_office"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="County"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etSubCounty"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etCounty"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/ic_office"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Sub County"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/etSubCounty"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/baseline_add_location_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Location"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textColorHint="@color/lightgrey"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etLocation"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Sugarcane Permit Company, Nairobi"
+                    android:textColor="@color/bluehead"
+                    android:textSize="22sp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/progress"/>
+
+            <LinearLayout
+                android:id="@+id/LL_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/RL_Form"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:elevation="5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/TV_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

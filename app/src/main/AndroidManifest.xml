@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Permit Application"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PermitApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".AllPermit"
+            android:exported="false" />
+        <activity
+            android:name=".GeneratePermitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PermitDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPermitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ApplyPermitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PermitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgentDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

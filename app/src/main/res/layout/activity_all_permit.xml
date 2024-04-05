@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context=".AllPermit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/LL_titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/IV_back"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_backarrow" />
+
+            <TextView
+                android:id="@+id/TV_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LL_titleBar"
+                android:gravity="center"
+                android:text="Generated Permits"
+                android:textColor="@color/colorWhite"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/splitLine"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/LL_titleBar"
+            android:background="@color/colorAccent" />
+
+        <ProgressBar
+            android:id="@+id/jobsProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/RL_AvailableJobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/splitLine"
+            android:padding="3dp"
+            android:paddingTop="5dp"
+            android:background="@color/divider"
+            android:elevation="3dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jobsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:padding="10sp"
+                tools:listitem="@layout/job_item"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
